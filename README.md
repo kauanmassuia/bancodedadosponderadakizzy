@@ -1,119 +1,125 @@
-Estrutura do Banco de Dados
-Tabelas
+# Estrutura do Banco de Dados
 
-User
+## Tabelas
 
-id: Identificação única do usuário.
-age: Idade do usuário.
-phone_number: Número de telefone do usuário.
-gender: Gênero do usuário.
-nationality: Nacionalidade do usuário.
-email: Endereço de email do usuário.
-name: Nome do usuário.
-password: Senha do usuário.
+### User
 
-Student
+- **id**: Identificação única do usuário.
+- **age**: Idade do usuário.
+- **phone_number**: Número de telefone do usuário.
+- **gender**: Gênero do usuário.
+- **nationality**: Nacionalidade do usuário.
+- **email**: Endereço de email do usuário.
+- **name**: Nome do usuário.
+- **password**: Senha do usuário.
 
-id: Identificação única do estudante.
-social_media: Informações sobre redes sociais do estudante.
-one_word: Descrição do estudante em uma palavra.
-about_me: Breve descrição sobre o estudante.
-id_university: Chave estrangeira para a universidade à qual o estudante pertence.
-id_country: Chave estrangeira para o país do estudante.
-id_user: Chave estrangeira para o usuário correspondente.
-id_answers: Chave estrangeira para as respostas do estudante.
+### Student
 
-Tutor
+- **id**: Identificação única do estudante.
+- **social_media**: Informações sobre redes sociais do estudante.
+- **one_word**: Descrição do estudante em uma palavra.
+- **about_me**: Breve descrição sobre o estudante.
+- **id_university**: Chave estrangeira para a universidade à qual o estudante pertence.
+- **id_country**: Chave estrangeira para o país do estudante.
+- **id_user**: Chave estrangeira para o usuário correspondente.
+- **id_answers**: Chave estrangeira para as respostas do estudante.
 
-id: Identificação única do tutor.
-id_country: Chave estrangeira para o país do tutor.
-id_user: Chave estrangeira para o usuário correspondente.
+### Tutor
 
-University
+- **id**: Identificação única do tutor.
+- **id_country**: Chave estrangeira para o país do tutor.
+- **id_user**: Chave estrangeira para o usuário correspondente.
 
-id: Identificação única da universidade.
-name: Nome da universidade.
-id_country: Chave estrangeira para o país onde a universidade está localizada.
+### University
 
-Country
+- **id**: Identificação única da universidade.
+- **name**: Nome da universidade.
+- **id_country**: Chave estrangeira para o país onde a universidade está localizada.
 
-id: Identificação única do país.
-country: Nome do país.
-city: Nome da cidade.
+### Country
 
-Team
+- **id**: Identificação única do país.
+- **country**: Nome do país.
+- **city**: Nome da cidade.
 
-id: Identificação única da equipe.
-color: Cor associada à equipe.
-universe: Universo da equipe.
-id_cesim_game: Chave estrangeira para o jogo Cesim associado.
-id_student_team: Chave estrangeira para a equipe de estudantes associada.
-id_tutor_team: Chave estrangeira para a equipe de tutores associada.
-ativa: Identifica se o time está ativo.
+### Team
 
-Cesim_game
+- **id**: Identificação única da equipe.
+- **color**: Cor associada à equipe.
+- **universe**: Universo da equipe.
+- **id_cesim_game**: Chave estrangeira para o jogo Cesim associado.
+- **id_student_team**: Chave estrangeira para a equipe de estudantes associada.
+- **id_tutor_team**: Chave estrangeira para a equipe de tutores associada.
+- **ativa**: Identifica se o time está ativo.
 
-id: Identificação única do jogo Cesim.
-startdate: Data de início do jogo.
-enddate: Data de término do jogo.
+### Cesim_game
 
-Round
+- **id**: Identificação única do jogo Cesim.
+- **startdate**: Data de início do jogo.
+- **enddate**: Data de término do jogo.
 
-id: Identificação única da rodada.
-startdate: Data de início da rodada.
-enddate: Data de término da rodada.
-round_number: Número da rodada.
-id_cesim_game: Chave estrangeira para o jogo Cesim associado.
+### Round
 
-Questionnaire
+- **id**: Identificação única da rodada.
+- **startdate**: Data de início da rodada.
+- **enddate**: Data de término da rodada.
+- **round_number**: Número da rodada.
+- **id_cesim_game**: Chave estrangeira para o jogo Cesim associado.
 
-id: Identificação única do questionário.
-name: Nome do questionário.
-quest_category: Categoria do questionário.
+### Questionnaire
 
-Questions
+- **id**: Identificação única do questionário.
+- **name**: Nome do questionário.
+- **quest_category**: Categoria do questionário.
 
-id: Identificação única da pergunta.
-description: Descrição da pergunta.
-id_questionnaire: Chave estrangeira para o questionário associado.
+### Questions
 
-Alternative
+- **id**: Identificação única da pergunta.
+- **description**: Descrição da pergunta.
+- **id_questionnaire**: Chave estrangeira para o questionário associado.
 
-id: Identificação única da alternativa.
-description: Descrição da alternativa.
-id_questions: Chave estrangeira para a pergunta associada.
+### Alternative
 
-questionnaire_round
+- **id**: Identificação única da alternativa.
+- **description**: Descrição da alternativa.
+- **id_questions**: Chave estrangeira para a pergunta associada.
 
-id: Identificação única da associação entre questionário e rodada.
-id_questionnaire: Chave estrangeira para o questionário associado.
-id_round: Chave estrangeira para a rodada associada.
+### questionnaire_round
 
-Answers
+- **id**: Identificação única da associação entre questionário e rodada.
+- **id_questionnaire**: Chave estrangeira para o questionário associado.
+- **id_round**: Chave estrangeira para a rodada associada.
 
-id: Identificação única da resposta.
-id_questions: Chave estrangeira para a pergunta associada.
-id_round: Chave estrangeira para a rodada associada.
-id_alternative: Chave estrangeira para a alternativa associada.
+### Answers
 
-Student_team
+- **id**: Identificação única da resposta.
+- **id_questions**: Chave estrangeira para a pergunta associada.
+- **id_round**: Chave estrangeira para a rodada associada.
+- **id_alternative**: Chave estrangeira para a alternativa associada.
 
-id: Identificação única da associação entre estudante e equipe.
-id_team: Chave estrangeira para a equipe associada.
-id_student: Chave estrangeira para o estudante associado.
+### Student_team
 
-Tutor_team
+- **id**: Identificação única da associação entre estudante e equipe.
+- **id_team**: Chave estrangeira para a equipe associada.
+- **id_student**: Chave estrangeira para o estudante associado.
 
-id: Identificação única da associação entre tutor e equipe.
-id_tutor: Chave estrangeira para o tutor associado.
-id_team: Chave estrangeira para a equipe associada.
+### Tutor_team
 
-questionnaire_student
+- **id**: Identificação única da associação entre tutor e equipe.
+- **id_tutor**: Chave estrangeira para o tutor associado.
+- **id_team**: Chave estrangeira para a equipe associada.
 
-id: Identificação única da associação entre questionário e estudante.
-id_studentSender: Chave estrangeira para o estudante remetente.
-id_studentReceiver: Chave estrangeira para o estudante destinatário.
-id_questionnaire: Chave estrangeira para o questionário associado.
-Relacionamentos
-Chaves Primárias: Cada tabela possui uma chave primária que identifica exclusivamente cada registro.
-Chaves Estrangeiras: Algumas tabelas têm chaves estrangeiras que estabelecem relações com outras tabelas.
+### questionnaire_student
+
+- **id**: Identificação única da associação entre questionário e estudante.
+- **id_studentSender**: Chave estrangeira para o estudante remetente.
+- **id_studentReceiver**: Chave estrangeira para o estudante destinatário.
+- **id_questionnaire**: Chave estrangeira para o questionário associado.
+
+## Relacionamentos
+
+- **Chaves Primárias**: Cada tabela possui uma chave primária que identifica exclusivamente cada registro.
+- **Chaves Estrangeiras**: Algumas tabelas têm chaves estrangeiras que estabelecem relações com outras tabelas.
+
+**Link para visualização:** (link_do_seu_repositorio)
+
