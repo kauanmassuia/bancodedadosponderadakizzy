@@ -121,5 +121,5 @@
 - **Chaves Primárias**: Cada tabela possui uma chave primária que identifica exclusivamente cada registro.
 - **Chaves Estrangeiras**: Algumas tabelas têm chaves estrangeiras que estabelecem relações com outras tabelas.
 
-**Link para visualização:** (link_do_seu_repositorio)
+**Link para visualização:** (https://github.com/kauanmassuia/bancodedadosponderadakizzy.git)
 
